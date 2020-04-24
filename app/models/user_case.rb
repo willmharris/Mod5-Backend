@@ -1,0 +1,2 @@
+class UserCase < ApplicationRecord
+end

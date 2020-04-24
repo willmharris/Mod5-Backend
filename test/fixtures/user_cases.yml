@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  case_id: 1
+  first_contact_date: 2020-04-24 02:33:46
+  first_contact_status: 1
+  second_contact_date: 2020-04-24 02:33:46
+  second_contact_status: 1
+  third_contact_date: 2020-04-24 02:33:46
+  third_contact_status: 1
+  planned_session_confirmed: false
+  team: 1
+  team_relationship: MyString
+
+two:
+  user_id: 1
+  case_id: 1
+  first_contact_date: 2020-04-24 02:33:46
+  first_contact_status: 1
+  second_contact_date: 2020-04-24 02:33:46
+  second_contact_status: 1
+  third_contact_date: 2020-04-24 02:33:46
+  third_contact_status: 1
+  planned_session_confirmed: false
+  team: 1
+  team_relationship: MyString

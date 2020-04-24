@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  account_type: 1
+  email: MyString
+  phone_number: 1
+  zip_code: 1
+  lead_active: false
+  call_scheduled: false
+  first_contact_date: 2020-04-24 02:28:58
+  first_contact_status: 1
+  second_contact_date: 2020-04-24 02:28:58
+  second_contact_status: 1
+  third_contact_date: 2020-04-24 02:28:58
+  third_contact_status: 1
+  entry_point: 1
+
+two:
+  account_type: 1
+  email: MyString
+  phone_number: 1
+  zip_code: 1
+  lead_active: false
+  call_scheduled: false
+  first_contact_date: 2020-04-24 02:28:58
+  first_contact_status: 1
+  second_contact_date: 2020-04-24 02:28:58
+  second_contact_status: 1
+  third_contact_date: 2020-04-24 02:28:58
+  third_contact_status: 1
+  entry_point: 1
