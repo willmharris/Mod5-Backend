@@ -11,4 +11,19 @@ class UsersController < ApplicationController
         render json: payload
     end 
 
+    def create
+        info = JSON.parse(request.body.string)
+        User.create({
+            first_name: info["firstName"], 
+            last_name: info["lastName"],
+            email: info["email"],
+            account_type: 1
+        })
+    end 
+
+    def destroy 
+        user = User.all.find(params[:id])
+        user.destroy
+    end 
+
 end
