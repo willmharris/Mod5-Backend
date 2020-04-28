@@ -24,7 +24,6 @@ class UsersController < ApplicationController
     def update 
         user = User.find(params[:id])
         user.update({account_type: params[:account_type]})
-        byebug
     end 
 
     def destroy 
