@@ -13,22 +13,25 @@ class UsersController < ApplicationController
 
     def create
         info = JSON.parse(request.body.string)
-        User.create({
+        new_user = User.create({
             first_name: info["firstName"], 
             last_name: info["lastName"],
             email: info["email"],
             account_type: 1
         })
+        render json: new_user
     end 
 
     def update 
         user = User.find(params[:id])
         user.update({account_type: params[:account_type]})
+        render json: user
     end 
 
     def destroy 
         user = User.all.find(params[:id])
         user.destroy
+        render json: user
     end 
 
 end
