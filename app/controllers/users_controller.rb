@@ -24,7 +24,8 @@ class UsersController < ApplicationController
 
     def update 
         user = User.find(params[:id])
-        user.update({account_type: params[:account_type]})
+        info = JSON.parse(request.body.string)
+        user.update(info)
         render json: user
     end 
 
