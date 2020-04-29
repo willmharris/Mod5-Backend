@@ -15,7 +15,8 @@ class CasesController < ApplicationController
 
     def update 
         this_case = Case.find(params[:id])
-        this_case.update({})
+        info = JSON.parse(request.body.string)
+        this_case.update(info)
         render json: this_case
     end 
 
