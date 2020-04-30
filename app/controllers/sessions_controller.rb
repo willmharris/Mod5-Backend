@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
     end 
 
     def destroy 
-        session = Case.all.find(params[:id])
+        session = Session.all.find(params[:id])
         session.destroy
         render json: session
     end 
