@@ -13,12 +13,7 @@ class UsersController < ApplicationController
 
     def create
         info = JSON.parse(request.body.string)
-        new_user = User.create({
-            first_name: info["firstName"], 
-            last_name: info["lastName"],
-            email: info["email"],
-            account_type: 1
-        })
+        new_user = User.create(info)
         render json: new_user
     end 
 

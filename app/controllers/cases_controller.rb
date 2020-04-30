@@ -7,9 +7,7 @@ class CasesController < ApplicationController
 
     def create
         info = JSON.parse(request.body.string)
-        new_case = Case.create({
-            confirmed_location: info["confirmedLocation"]
-        })
+        new_case = Case.create(info)
         render json: new_case
     end 
 
