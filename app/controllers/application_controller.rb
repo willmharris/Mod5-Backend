@@ -13,7 +13,8 @@ class ApplicationController < ActionController::API
         }
         cases = Case.all 
         sessions = Session.all 
-        info = {leads: leads, clients: clients, cases: cases, sessions: sessions}  
+        user_cases = UserCase.all 
+        info = {leads: leads, clients: clients, cases: cases, sessions: sessions, user_cases: user_cases}  
         render json: info 
     end 
 
