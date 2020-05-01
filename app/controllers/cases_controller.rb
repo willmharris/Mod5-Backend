@@ -1,9 +1,11 @@
 class CasesController < ApplicationController
 
     def create
-        info = JSON.parse(request.body.string)
-        new_case = Case.create(info)
-        render json: new_case
+        data = JSON.parse(request.body.string)
+        new_case = Case.create(confirmed_location: data["confirmed_location"])
+        first_new_user_case = UserCase.create(user_id: data["first_client"]["id"], case_id: new_case.id)
+        second_new_user_case = UserCase.create(user_id: data["second_client"]["id"], case_id: new_case.id)
+        render json: {addedCase: new_case, firstAddedUserCase: first_new_user_case, secondAddedUserCase: second_new_user_case}
     end 
 
     def update 
