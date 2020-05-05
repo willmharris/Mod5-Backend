@@ -18,4 +18,11 @@ class ApplicationController < ActionController::API
         render json: info 
     end 
 
+    def login
+        data = JSON.parse(request.body.string)
+        user = User.find_by(email: data["email"])
+        user = user.try(:authenticate, data["password"])
+        render json: user
+    end 
+
 end
