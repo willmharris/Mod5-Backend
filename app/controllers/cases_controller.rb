@@ -5,6 +5,7 @@ class CasesController < ApplicationController
         new_case = Case.create(planned_date: data["planned_date"], planned_location: data["planned_location"], active: true)
         first_new_user_case = UserCase.create(user_id: data["first_client"]["id"], case_id: new_case.id)
         second_new_user_case = UserCase.create(user_id: data["second_client"]["id"], case_id: new_case.id)
+        byebug
         render json: {addedCase: new_case, firstAddedUserCase: first_new_user_case, secondAddedUserCase: second_new_user_case}
     end 
 
